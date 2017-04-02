@@ -4,7 +4,7 @@
   "description": "A variant on the Tic-Tac-Toe classic game, where you have to bid to play each move",
   "main": "server.js",
   "scripts": {
-    "postinstall": "./node_modules/.bin/browserify src/index.js -o public/bundle.js -t [ babelify --presets [ es2015 es2016 react ] ]",
+    "postinstall": "./node_modules/.bin/browserify src/index.js -o public/bundle.js -t [ babelify --presets [ es2015 es2016 react ] ] -t [ browserify-css ]",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "./node_modules/.bin/browserify -d src/index.js -o public/bundle.js -t [ babelify --presets [ es2015 es2016 react ] ] -t [ browserify-css ]"
