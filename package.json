@@ -1,0 +1,29 @@
+{
+  "name": "bidding-tictactoe",
+  "version": "0.1.0",
+  "description": "A variant on the Tic-Tac-Toe classic game, where you have to bid to play each move",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/browserify src/index.js -o public/bundle.js -t [ babelify --presets [ es2015 es2016 react ] ]",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "./node_modules/.bin/browserify -d src/index.js -o public/bundle.js -t [ babelify --presets [ es2015 es2016 react ] ] -t [ browserify-css ]"
+  },
+  "author": "Alexandre Kohen",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "body-parser": "^1.15.2",
+    "browserify": "^14.1.0",
+    "express": "^4.14.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "browserify-css": "^0.10.0"
+  }
+}
